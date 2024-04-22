@@ -6,4 +6,8 @@ import com.amit.User_Group_Role.Model.RolePojo;
 
 public interface RoleRepository extends JpaRepository<RolePojo, Long> {
 
+    public RolePojo findByRoleNameAndCreatedBy(String name, String createdBy);
+
+    public boolean existsByRoleNameAndCreatedBy(String name, String createdBy);
+
 }

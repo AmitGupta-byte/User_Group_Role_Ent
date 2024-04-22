@@ -24,6 +24,11 @@ public class RolePojo {
 	@Column(columnDefinition = "TEXT")
 	private String permissions;
 
+	@Column(name = "CreatedBy", nullable = false)
+    private String createdBy;
+
+
+
 	public long getId() {
 		return Id;
 	}
@@ -56,11 +61,21 @@ public class RolePojo {
 		this.permissions = permissions;
 	}
 
+	public String getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+
 	@Override
 	public String toString() {
 		return "RolePojo [Id=" + Id + ", roleId=" + roleId + ", roleName=" + roleName + ", permissions=" + permissions
-				+ "]";
+				+ ", createdBy=" + createdBy + "]";
 	}
+
+
 
 	
 	
